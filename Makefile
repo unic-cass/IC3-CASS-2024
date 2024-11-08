@@ -47,7 +47,7 @@ ifeq ($(PDK),sky130A)
 	export OPEN_PDKS_COMMIT_LVS?=6d4d11780c40b20ee63cc98e645307a9bf2b2ab8
 	export OPEN_PDKS_COMMIT?=78b7bc32ddb4b6f14f76883c2e2dc5b5de9d1cbc
 	export OPENLANE_TAG?=2023.07.19-1
-	MPW_TAG ?= 2024.09.12-1
+	MPW_TAG ?= mpw-9k
 
 ifeq ($(CARAVEL_LITE),1)
 	CARAVEL_NAME := caravel-lite
@@ -66,7 +66,7 @@ ifeq ($(PDK),sky130B)
 	export OPEN_PDKS_COMMIT_LVS?=6d4d11780c40b20ee63cc98e645307a9bf2b2ab8
 	export OPEN_PDKS_COMMIT?=78b7bc32ddb4b6f14f76883c2e2dc5b5de9d1cbc
 	export OPENLANE_TAG?=2023.07.19-1
-	MPW_TAG ?= 2024.09.12-1
+	MPW_TAG ?= mpw-9k
 
 ifeq ($(CARAVEL_LITE),1)
 	CARAVEL_NAME := caravel-lite
@@ -254,7 +254,6 @@ run-precheck: check-pdk check-precheck enable-lvs-pdk
 		docker run -it -v $(PRECHECK_ROOT):$(PRECHECK_ROOT) \
 		-v $(INPUT_DIRECTORY):$(INPUT_DIRECTORY) \
 		-v $(PDK_ROOT):$(PDK_ROOT) \
-		-v $(HOME)/.ipm:$(HOME)/.ipm \
 		-e INPUT_DIRECTORY=$(INPUT_DIRECTORY) \
 		-e PDK_PATH=$(PDK_ROOT)/$(PDK) \
 		-e PDK_ROOT=$(PDK_ROOT) \
@@ -267,7 +266,6 @@ run-precheck: check-pdk check-precheck enable-lvs-pdk
 		docker run -it -v $(PRECHECK_ROOT):$(PRECHECK_ROOT) \
 		-v $(INPUT_DIRECTORY):$(INPUT_DIRECTORY) \
 		-v $(PDK_ROOT):$(PDK_ROOT) \
-		-v $(HOME)/.ipm:$(HOME)/.ipm \
 		-e INPUT_DIRECTORY=$(INPUT_DIRECTORY) \
 		-e PDK_PATH=$(PDK_ROOT)/$(PDK) \
 		-e PDK_ROOT=$(PDK_ROOT) \

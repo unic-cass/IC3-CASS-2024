@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1730807029
+timestamp 1730999574
 << nwell >>
 rect 1066 64453 63702 64774
 rect 1066 63365 63702 63931
@@ -907,7 +907,7 @@ string FIXED_BBOX 0 0 64808 66952
 string LEFclass BLOCK
 string LEFview TRUE
 string GDS_END 15057922
-string GDS_FILE /home/jm/Documentos/UNIC-CASS-2024/uniccass_example/openlane/wb_RAxM/runs/24_11_05_08_28/results/signoff/wb_RAxM.magic.gds
+string GDS_FILE /media/jm/128GB_SSD/IC3-CASS-2024/openlane/wb_RAxM/runs/24_11_07_13_57/results/signoff/wb_RAxM.magic.gds
 string GDS_START 1416436
 << end >>
 

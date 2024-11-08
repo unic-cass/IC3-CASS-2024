@@ -15,6 +15,8 @@
 
 # Caravel user project includes
 -v $(USER_PROJECT_VERILOG)/rtl/user_project_wrapper.v	     
-# -v $(USER_PROJECT_VERILOG)/rtl/user_proj_example.v
 -v $(USER_PROJECT_VERILOG)/rtl/wb_RAxM.v	     
- 
+-v $(USER_PROJECT_VERILOG)/rtl/user_proj_example.v
+-v $(USER_PROJECT_VERILOG)/rtl/agrochip.v
+-v $(USER_PROJECT_VERILOG)/rtl/nbit_counter.v
+-v $(USER_PROJECT_VERILOG)/rtl/Comparador_5_bits.v

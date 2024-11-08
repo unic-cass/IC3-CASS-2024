@@ -7,20 +7,28 @@
     "ROUTING_CORES": 1,
     "CLOCK_PERIOD": 25,
     "CLOCK_PORT": "wb_clk_i",
-    "FP_PDN_MACRO_HOOKS": "approx_mul vccd2 vssd2 vccd2 vssd2",
+    "FP_PDN_MACRO_HOOKS": "approx_mul vccd2 vssd2 vccd2 vssd2, mprj vccd1 vssd1 vccd1 vssd1",
     "MACRO_PLACEMENT_CFG": "dir::macro.cfg",
     "MAGIC_DEF_LABELS": 0,
     "VERILOG_FILES_BLACKBOX": [
-        "dir::../../verilog/gl/wb_RAxM.v"
+        "dir::../../verilog/gl/wb_RAxM.v",
+        "dir::../../verilog/gl/user_proj_example.v"
     ],
-    "EXTRA_LEFS": "dir::../../lef/wb_RAxM.lef",
-    "EXTRA_GDS_FILES": "dir::../../gds/wb_RAxM.gds",
-    "EXTRA_LIBS": "dir::../../lib/wb_RAxM.lib",
+    "EXTRA_LEFS": ["dir::../../lef/wb_RAxM.lef", 
+    "dir::../../lef/user_proj_example.lef"],
+    "EXTRA_GDS_FILES": ["dir::../../gds/wb_RAxM.gds",
+    "dir::../../gds/user_proj_example.gds"],
+    "EXTRA_LIBS": ["dir::../../lib/wb_RAxM.lib", 
+    "dir::../../lib/user_proj_example.lib"],
     "EXTRA_SPEFS": [
         "wb_RAxM",
         "dir::../../spef/multicorner/wb_RAxM.min.spef",
         "dir::../../spef/multicorner/wb_RAxM.nom.spef",
-        "dir::../../spef/multicorner/wb_RAxM.max.spef"
+        "dir::../../spef/multicorner/wb_RAxM.max.spef",
+        "user_proj_example", 
+        "dir::../../spef/multicorner/user_proj_example.min.spef", 
+        "dir::../../spef/multicorner/user_proj_example.nom.spef", 
+        "dir::../../spef/multicorner/user_proj_example.max.spef"
     ],
     "BASE_SDC_FILE": "dir::base_user_project_wrapper.sdc",
     "IO_SYNC": 0,
